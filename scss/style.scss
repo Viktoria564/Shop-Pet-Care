@@ -1,0 +1,17 @@
+@import 'fonts';
+@import 'reset';
+@import 'vars';
+@import 'global';
+
+
+@import './components/header';
+@import './components/footer';
+
+@import './components/sections/hero';
+@import './components/sections/about';
+@import './components/sections/services';
+@import './components/sections/hours';
+@import './components/sections/price';
+@import './components/sections/team';
+@import './components/sections/contacts';
+@import './components/sections/clients';

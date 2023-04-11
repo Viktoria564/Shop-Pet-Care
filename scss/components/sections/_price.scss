@@ -1,0 +1,127 @@
+.price {
+  padding-bottom: 170px;
+  text-align: center;
+
+  @media screen and (max-width: $xl) {
+    padding-bottom: 120px;
+  }
+
+  @media screen and (max-width: $md) {
+    padding-bottom: 80px;
+  }
+
+  &__subtitle {
+    font-size: 30px;
+    margin-bottom: 60px;
+
+    @media screen and (max-width: $sm) {
+      font-size: 25px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    gap: 5px;
+
+    @media screen and (max-width: $md) {
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 214px;
+      height: 186px;
+      background-image: url('../images/elements/price-up.png');
+      background-repeat: no-repeat;
+      right: -15px;
+      top: -120px;
+      z-index: -1;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 221px;
+      height: 129px;
+      background-image: url('../images/elements/price-down.png');
+      background-repeat: no-repeat;
+      left: -25px;
+      bottom: 0;
+      z-index: -1;
+    }
+  }
+
+  &__box {
+    padding: 47px 50px 13px;
+    background-color: $white;
+    border: 1px solid $default;
+    border-radius: 22px;
+    max-width: 294px;
+
+    &--color {
+      transform: scale(1.1);
+      z-index: 1;
+      background-color: $accent;
+      box-shadow: 0px 20px 30px rgba(255, 72, 128, 0.161);
+      color: $white;
+      border-color: $accent;
+
+      .price__title {
+        color: $white;
+      }
+
+      .price__svg {
+        stroke: $white;
+      }
+
+      .price__num {
+        color: $white;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 34px;
+    margin-bottom: 30px;
+    transition: color 0.5s;
+  }
+
+  &__list {
+    text-align: left;
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 13px;
+    }
+  }
+
+  &__svg {
+    stroke: $accent;
+    margin-right: 7px;
+    transition: stroke 0.5s;
+  }
+
+  &__num {
+    font-family: 'Pacifico';
+    font-size: 48px;
+    line-height: 1.75;
+    color: $accent;
+    transition: color 0.5s;
+
+    sup {
+      font-size: 20px;
+    }
+  }
+}

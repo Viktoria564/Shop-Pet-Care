@@ -1,0 +1,112 @@
+.contacts {
+  padding-bottom: 170px;
+
+  @media screen and (max-width: $xl) {
+    padding-bottom: 120px;
+  }
+
+  @media screen and (max-width: $md) {
+    padding-bottom: 80px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: $xl) {
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    @media screen and (max-width: $xl) {
+      margin-left: auto;
+    }
+  }
+
+  &__subtitle {
+    font-size: 30px;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: $sm) {
+      font-size: 25px;
+    }
+  }
+}
+
+.address-contacts {
+  font-style: normal;
+
+  @media screen and (max-width: $xl) {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__list {
+    font-size: 16px;
+    color: #707070;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background-color: $accent;
+      border-radius: 3px;
+      box-shadow: 0px 15px 30px rgba(255, 72, 128, 0.161);
+      margin-right: 18px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      top: 12px;
+      left: 12px;
+    }
+
+    &--local::after {
+      background-image: url('../images/sprite.svg#icon-local');
+    }
+
+    &--tel::after {
+      background-image: url('../images/sprite.svg#icon-tel-white');
+    }
+
+    &--time::after {
+      background-image: url('../images/sprite.svg#icon-time');
+    }
+  }
+
+  &__link {
+    border-radius: 3px;
+    border: 1px solid transparent;
+    transition: color 0.5s, opacity 0.5s, border-color 0.5s;
+
+    &:hover {
+      color: $accent;
+    }
+
+    &:focus {
+      border-color: $accent;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+}

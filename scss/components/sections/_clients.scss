@@ -1,0 +1,150 @@
+.clients {
+  padding-bottom: 100px;
+  text-align: center;
+
+  @media screen and (max-width: $md) {
+    padding-bottom: 80px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    @media screen and (max-width: $xl) {
+      margin-top: 60px;
+      font-size: 20px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 30px;
+    margin-bottom: 60px;
+    text-align: center;
+
+    @media screen and (max-width: $xl) {
+      margin-bottom: 40px;
+    }
+
+    @media screen and (max-width: $sm) {
+      font-size: 25px;
+    }
+  }
+
+  &__boxes {
+    max-width: 868px;
+    height: 370px;
+    position: relative;
+    margin: 0 auto;
+
+    @media screen and (max-width: $xl) {
+      height: 440px;
+    }
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+    height: 260px;
+    background-color: $white;
+    box-shadow: 0px 15px 30px rgba(132, 132, 132, 0.122);
+    border-radius: 7px;
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 8%;
+    z-index: -1;
+    transition: z-index 0.5s, max-width 0.5s, width 0.5s, left 0.5s, top 0.5s;
+
+    @media screen and (max-width: $xl) {
+      top: 21%;
+    }
+
+    @media screen and (max-width: $lg) {
+      max-width: 632px;
+    }
+
+    @media screen and (max-width: $md) {
+      max-width: 300px;
+    }
+
+    &--active {
+      z-index: 1;
+      max-width: 868px;
+      width: 100%;
+      top: 0;
+
+      @media screen and (max-width: $xl) {
+        top: 16%;
+      }
+
+      @media screen and (max-width: $lg) {
+        max-width: 700px;
+      }
+
+      @media screen and (max-width: $md) {
+        max-width: 368px;
+      }
+    }
+  }
+
+  &__img {
+    border-radius: 50%;
+    margin-right: 40px;
+
+    @media screen and (max-width: $xl) {
+      position: absolute;
+      margin-right: 0;
+      top: -70px;
+    }
+  }
+
+  &__review {
+    max-width: 440px;
+    text-align: left;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    @media screen and (max-width: $xl) {
+      padding: 0 40px;
+      max-width: 100%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+  }
+
+  &__item {
+    padding: 0 7px;
+  }
+
+  &__link {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    opacity: 0.24;
+    background-color: $accent;
+    border-radius: 50%;
+    transition: opacity 0.5s;
+
+    &--active {
+      width: 20px;
+      height: 20px;
+      opacity: 1;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

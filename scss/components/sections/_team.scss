@@ -1,0 +1,80 @@
+.team {
+  padding-bottom: 165px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: auto;
+
+  @media screen and (max-width: $xl) {
+    padding-bottom: 100px;
+  }
+
+  @media screen and (max-width: $md) {
+    padding-bottom: 80px;
+  }
+
+  &__subtitle {
+    font-size: 30px;
+    margin-bottom: 60px;
+
+    @media screen and (max-width: $md) {
+      margin-bottom: 40px;
+    }
+
+    @media screen and (max-width: $sm) {
+      margin-bottom: 25px;
+      font-size: 25px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-around;
+
+    @media screen and (max-width: $xl) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 620px;
+      margin: 0 auto;
+      gap: 60px;
+    }
+
+    @media screen and (max-width: $sm) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__img {
+    border-radius: 50%;
+    margin-bottom: 30px;
+  }
+
+  &__position {
+    font-size: 16px;
+    color: #707070;
+    margin-bottom: 5px;
+  }
+
+  &__name {
+    font-family: 'Pacifico';
+    font-size: 20px;
+    line-height: 1.75;
+    color: $accent;
+    margin-bottom: 10px;
+  }
+
+  .social-list__icon {
+    fill: #8C8C8C;
+    transition: fill 0.5s;
+
+    &:hover {
+      fill: $accent;
+    }
+  }
+}

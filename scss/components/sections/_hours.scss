@@ -1,0 +1,94 @@
+.hours {
+  padding-bottom: 170px;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+  @media screen and (max-width: $xl) {
+    padding-bottom: 120px;
+  }
+
+  @media screen and (max-width: $md) {
+    padding-bottom: 80px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-around;
+
+    @media screen and (max-width: $xl) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__content {
+    max-width: 576px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media screen and (max-width: $xl) {
+      text-align: center;
+    }
+  }
+
+  &__list {
+    display: flex;
+
+    @media screen and (max-width: $md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    padding: 15px 35px 39px;
+
+    @media screen and (max-width: $sm) {
+      padding: 15px 10px 39px;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 80px;
+      background-image: url('../images/sprite.svg#icon-sun');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin: 0 auto 12px;
+    }
+
+    &--moon {
+      padding-top: 100px;
+    }
+
+    &--moon::before {
+      background-image: url('../images/sprite.svg#icon-moon');
+    }
+  }
+
+  &__list-title {
+    font-size: 22px;
+    line-height: 1.75;
+  }
+
+  &__span {
+    font-size: 26px;
+
+    @media screen and (max-width: $sm) {
+      font-size: 23px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 30px;
+    margin-bottom: 20px;
+
+    @media screen and (max-width: $sm) {
+      font-size: 25px;
+    }
+  }
+}
